@@ -1,0 +1,28 @@
+I like to setup my development environment on Ubuntu.  The version I use is 16.04 LTS.
+On this pc, I install nodejs, ionic2, and mongodb.  I also use Visual Studio Code as the IDE.
+
+Let's start installing NodeJS.
+Before install NodeJS, find out if you have it already installed.
+$ which node
+The go to the nodejs.org to find the latest version.  Currently, v4.5.0 LTS and v6.5.0 Current.
+$ ver=6.5.0
+$ cd $HOME/Downloads/
+$ wget -c https://nodejs.org/dist/v$ver/node-v$ver.tar.gz
+$ sudo mv node-v$ver.tar.gz ~/build/
+$ cd ~/build/
+$ sudo chmod 777 -R .
+$ tar -zxvf node-v$ver.tar.gz
+$ cd node-v$ver
+$ sudo chmod 777 -R .
+$ sudo ./configure && sudo make && sudo make install
+$ node -v
+$ npm version
+
+Then install Ionic2:
+$ sudo npm install -g ionic@beta
+
+Visual Studio Code has a .deb file so installation is so easy.  Just download and open the .deb file to install.
+Once installed, put Code in the Launcher.
+
+Before you're done, make sure you install git.  Always start a new development on a fresh repository.
+$ sudo apt-get install git
